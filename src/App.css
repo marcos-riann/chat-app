@@ -1,38 +1,200 @@
-.App {
-  text-align: center;
+/* src/App.css */
+* {
+  box-sizing: border-box; /* Facilita o controle de tamanho */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body {
+  height: 100%; /* Garante que o body ocupe 100% da altura da janela */
+  margin: 0; /* Remove a margem padrão */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex; /* Torna o body um contêiner flexível */
+  flex-direction: column; /* Organiza os itens em coluna */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Cabeçalho */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* Sala de Chat */
+.chat-room {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Faz com que a sala de chat ocupe o espaço restante */
+}
+
+/* Mensagens */
+.messages {
+  flex: 1; 
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fafafa;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.message.sent {
+  justify-content: flex-end;
+}
+
+.message.received {
+  justify-content: flex-start;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.message-text {
+  background-color: #e1ffc7;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 70%;
+  word-wrap: break-word;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulário de Mensagens */
+.message-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-right: 10px;
+  outline: none;
+}
+
+.message-input:focus {
+  border-color: #66afe9;
+}
+
+.send-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
+
+.send-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Tela de Login */
+.sign-in {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh; /* Preencher a altura total da tela */
+  background-color: #f0f0f0; /* Fundo claro */
+}
+
+.sign-in h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.sign-in p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 400px; /* Limitar a largura do texto */
+}
+
+.google-signin-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  background-color: #4285f4; /* Cor do Google */
   color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.google-signin-button:hover {
+  background-color: #357ae8; /* Cor ao passar o mouse */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.google-signin-button:focus {
+  outline: none;
+}
+
+/* Botão de Logout */
+.signout-button {
+  background-color: #dc3545; /* Cor de fundo para o botão de logout */
+  color: white; /* Cor do texto */
+  border: none; /* Sem borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 10px 20px; /* Espaçamento interno */
+  cursor: pointer; /* Cursor de mão ao passar o mouse */
+  transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.signout-button:hover {
+  background-color: #c82333; /* Cor ao passar o mouse */
+}
+
+.signout-button:focus {
+  outline: none; /* Remove o contorno padrão ao focar */
+}
+
+/* Rodapé */
+.app-footer {
+  background-color: #f8f9fa; /* Cor de fundo do footer */
+  padding: 10px 20px;       /* Espaçamento interno */
+  text-align: center;       /* Centraliza o texto */
+  border-top: 1px solid #dee2e6; /* Borda superior para separação */
+  width: 100%;              /* Largura total */
+}
+
+.app-footer p {
+  margin: 0;                /* Remove margens do parágrafo */
+  color: #6c757d;           /* Cor do texto */
+  font-size: 0.9em;         /* Tamanho da fonte */
+  line-height: 1.5;         /* Espaçamento entre linhas */
 }
