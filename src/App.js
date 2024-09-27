@@ -2,9 +2,10 @@
 import React from "react";
 import { auth } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import ChatRoom from "./components/ChatRoom";
-import { SignIn, SignOut } from "./components/SignIn"; // Importando como exportações nomeadas
-import Footer from "./components/Footer"; // Importando o componente Footer
+import ChatRoom from "./components/ChatRoom"; // Atualize o caminho se necessário
+import SignIn from "./components/SignIn"; // Atualize o caminho se necessário
+import SignOut from "./components/SignOut"; // Atualize o caminho se necessário
+import Footer from "./components/Footer"; // Importe o Footer
 import './App.css'; // Importando os estilos
 
 function App() {
@@ -27,4 +28,3 @@ function App() {
 }
 
 export default App;
-  

@@ -1,17 +1,7 @@
 // src/SignIn.js
 import React from "react";
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth"; // Adicione 'signOut' aqui
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth"; // Adicione 'signOut' aqui
 import '../App.css'; // Importando o CSS
-
-export const SignOut = () => {
-  const auth = getAuth();
-
-  return auth.currentUser ? (
-    <button className="signout-button" onClick={() => signOut(auth)}>
-      Sair
-    </button>
-  ) : null;
-};
 
 export const SignIn = () => {
   const auth = getAuth();
@@ -35,3 +25,5 @@ export const SignIn = () => {
     </div>
   );
 };
+
+export default SignIn;

@@ -1,14 +1,13 @@
-// src/Footer.js
+// src/components/Footer.js
 import React from 'react';
-import '../App.css'; // Importando estilos
+import '../App.css'; // Importar o CSS
 
 const Footer = () => {
+
   return (
     <footer className="app-footer">
-      <p>
-        Developed by Marcos Rian. <br/>
-        &copy; {new Date().getFullYear()} Todos os direitos reservados.
-      </p>
+      <p>Desenvolvido por Marcos Rian</p>
+      <p>&copy; {new Date().getFullYear()} Todos os direitos reservados.</p>
     </footer>
   );
 };
