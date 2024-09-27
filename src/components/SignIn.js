@@ -1,7 +1,7 @@
 // src/SignIn.js
 import React from "react";
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth"; // Adicione 'signOut' aqui
-import './App.css'; // Importando o CSS
+import '../App.css'; // Importando o CSS
 
 export const SignOut = () => {
   const auth = getAuth();

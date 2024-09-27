@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { getFirestore, collection, addDoc, serverTimestamp, orderBy, query } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 import { useCollectionData } from "react-firebase-hooks/firestore";
-import './App.css';  // Importar o CSS
+import '../App.css';  // Importar o CSS
 
 const ChatRoom = () => {
   const firestore = getFirestore();

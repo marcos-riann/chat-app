@@ -1,7 +1,7 @@
 // src/SignOut.js
 import React from "react";
 import { getAuth, signOut } from "firebase/auth";
-import './App.css'; // Importando os estilos
+import '../App.css'; // Importando os estilos
 
 const SignOut = () => {
   const auth = getAuth();
