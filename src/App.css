@@ -39,7 +39,7 @@ h1 {
 
 /* Sala de Chat */
 .chat-room {
-  max-width: 600px;
+  max-width: 800px;
   margin: 20px auto; /* Mova o margin para cima */
   padding: 20px;
   background: white;
