@@ -35,6 +35,7 @@ body {
 
 h1 {
   margin: 0;
+  text-align: center;
 }
 
 /* Sala de Chat */
@@ -51,7 +52,7 @@ h1 {
 /* Mensagens */
 .messages {
   flex: 1; 
-  max-height: 400px;
+  max-height: 450px;
   overflow-y: auto;
   margin-bottom: 20px;
   padding: 10px;
