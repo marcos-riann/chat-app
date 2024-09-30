@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <header className="app-header">
-        <h1>Spacean App</h1>
+        <h1>Chat App</h1>
         <SignOut />
       </header>
 

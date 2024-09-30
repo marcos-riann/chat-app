@@ -17,7 +17,7 @@ export const SignIn = () => {
 
   return (
     <div className="sign-in">
-      <h1>Bem-vindo ao Spacean Chat</h1>
+      <h1>Bem-vindo ao Chat App</h1>
       <p>Faça login com sua conta do Google para começar a conversar.</p>
       <button onClick={signInWithGoogle} className="google-signin-button">
         Entrar com o Google
